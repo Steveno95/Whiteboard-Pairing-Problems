@@ -14,3 +14,10 @@ function createMinBstHelper(sortedArray, left, right) {
     return node;
 }
 
+class BinaryTreeNode {
+    constructor(value) {
+      this.value = value;
+      this.left = null;
+      this.right = null;
+    }
+}
