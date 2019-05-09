@@ -21,3 +21,24 @@ class BinaryTreeNode {
       this.right = null;
     }
 }
+
+function bst(root) {
+    const stack = [];
+    stack.push({node: root, lowerBound: -Infinity, upperBound: Infinity});
+    while (stack.length) {
+        const bounds = stack.pop();
+        const node = bounds.node;
+        const lowerBound = bounds.lowerBound;
+        const upperBound = bounds.upperBound;
+        if (node.value <= lowerBound || node.value >= upperBound) {
+            return false;
+        }
+        if (node.left) {
+            stack.push({node: node.left, lowerBound: lowerBound, upperBound: node.value});
+        }
+        if (node.right) {
+            stack.push({node: node.right, lowerBound: node.value, upperBound: upperBound});
+        }
+    }
+    return true;
+}
