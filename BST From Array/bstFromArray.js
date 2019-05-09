@@ -1,12 +1,12 @@
 function createMinBst(sortedArray) {
-    return createMinBst(sortedArray, 0, sortedArray.length - 1);
+    return createMinBstHelper(sortedArray, 0, sortedArray.length - 1);
 }
 
 function createMinBstHelper(sortedArray, left, right) {
     if (right < left) return null;
 
-    const mid = math.floor((left + right) / 2);
-    const node = new BinaryTreeNode(sortedArray);
+    const mid = Math.floor((left + right) / 2);
+    const node = new BinaryTreeNode(sortedArray[mid]);
 
     node.left = createMinBstHelper(sortedArray, left, mid - 1);
     node.right = createMinBstHelper(sortedArray, mid + 1, right);
@@ -47,3 +47,15 @@ function maxDepth(node) {
     if (!node) return 0;
     return 1 + Math.max(maxDepth(node.left), maxDepth(node.right));
 }
+
+let sortedArray = [1, 2, 3, 4, 5, 6, 7];
+let bST = createMinBst(sortedArray);
+
+console.log(bst(bST));   // should print true
+console.log(maxDepth(bST));             // should print 3
+
+sortedArray = [4, 10, 11, 18, 42, 43, 47, 49, 55, 67, 79, 89, 90, 95, 98, 100];
+bST = createMinBst(sortedArray);
+
+console.log(bst(bST));   // should print true
+console.log(maxDepth(bST));             // should print 5
