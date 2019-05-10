@@ -27,3 +27,12 @@ class BinaryTreeNode:
     def insertRight(self, value):
         self.right = BinaryTreeNode(value)
         return self.right
+
+root = BinaryTreeNode(5)
+print(checkBalance(root)) # should print true
+
+root.insertLeft(10)
+print(checkBalance(root)) # should print false
+
+root.insertRight(11)
+print(checkBalance(root)) # should print true
