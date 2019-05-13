@@ -22,4 +22,6 @@ function balancedBrackets(str) {
             if (openers[stack.pop()] !== line[i]) return false;
         }
     }
+
+    return stack.length === 0;
 }
