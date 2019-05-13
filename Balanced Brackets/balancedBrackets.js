@@ -4,10 +4,14 @@ function balancedBrackets(str) {
     const stack = [];
 
     const openers = {
+        '(': ')',
+        '{': '}',
+        '[': ']'
+    };
+
+    const closers = {
         ')': true,
         '}': true,
         ']': true
-    };
-
-    
+    }
 }
