@@ -14,4 +14,12 @@ function balancedBrackets(str) {
         '}': true,
         ']': true
     }
+
+    for (let i = 0; i < line.length; i ++) {
+        if (openers[line[i]]) {
+            stack.push(line[i]);
+        } else if (closers[line[i]]) {
+            if (openers[stack.pop()] !== line[i]) return false;
+        }
+    }
 }
