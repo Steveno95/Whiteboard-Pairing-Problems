@@ -8,3 +8,10 @@ def count_votes(arr):
             counts[vote] = 0
 
         counts[vote] += 1
+
+        if counts[vote] > max_votes:
+            max_votes = counts[vote]
+
+            winner = vote
+
+        
