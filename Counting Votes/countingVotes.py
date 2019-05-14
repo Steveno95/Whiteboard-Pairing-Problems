@@ -17,3 +17,9 @@ def count_votes(arr):
         elif counts[vote] == max_votes:
             if vote > winner:
                 winner = vote
+    
+    return winner
+
+
+print(count_votes(['veronica', 'mary', 'alex', 'james', 'mary', 'michael', 'alex', 'michael',])) # should print michael
+print(count_votes(['john', 'johnny', 'jackie', 'johnny', 'john', 'jackie', 'jamie', 'jamie', 'john', 'johnny', 'jamie', 'johnny', 'john',])) # should print johnny
