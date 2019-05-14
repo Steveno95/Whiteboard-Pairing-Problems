@@ -14,4 +14,6 @@ def count_votes(arr):
 
             winner = vote
 
-        
+        elif counts[vote] == max_votes:
+            if vote > winner:
+                winner = vote
