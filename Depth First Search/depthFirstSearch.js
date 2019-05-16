@@ -1,3 +1,4 @@
+// Recursive
 function rdfs(node, cb) {
     cb(node.value);
 
@@ -10,6 +11,7 @@ function rdfs(node, cb) {
     }
 }
 
+// Iterative
 function idfs(node, cb) {
     const stack = [];
     stack.push(node);
