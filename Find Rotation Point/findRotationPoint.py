@@ -17,3 +17,17 @@ def findRotationPoint(words):
             break
     
     return ceilingIndex
+
+smallDataSet = [
+    'ptolemaic',
+    'retrograde',
+    'supplant',
+    'undulate',
+    'xenoepist',
+    'asymptote',
+    'babka',
+    'banoffee',
+    'engender',
+    'karpatka',
+    'othellolagkage',
+]
