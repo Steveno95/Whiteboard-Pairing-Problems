@@ -12,9 +12,24 @@ function integerPairs(arr, k) {
 
 // another way to write the function
 
-function integerPairs(arr, k) {
-    arr.sort((x, y) => x - y);
-}
+// function integerPairs(arr, k) {
+//     arr.sort((x, y) => x - y);
+    
+//     let first = 0;
+//     let last = arr.length - 1;
+
+//     while (first < last) {
+//         const sum = arr[first] + arr[last];
+//         if (sum === k) {
+//             console.log(arr[first], arr[last]);
+//             first ++;
+//             last --;
+//         } else {
+//             if (sum < k) first ++;
+//             else last--;
+//         }
+//     }
+// }
 
 
 integerPairs([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 11);  // should print '6 5', '7 4', '8 3', '9 2', '10 1'
