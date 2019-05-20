@@ -10,6 +10,13 @@ function integerPairs(arr, k) {
 }
 
 
+// another way to write the function
+
+function integerPairs(arr, k) {
+    arr.sort((x, y) => x - y);
+}
+
+
 integerPairs([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 11);  // should print '6 5', '7 4', '8 3', '9 2', '10 1'
 console.log();
 integerPairs([5, 5, 4], 12);                        // should not print anything
