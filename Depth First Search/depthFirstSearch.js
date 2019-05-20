@@ -1,3 +1,21 @@
+// Implement a function depthFirstForEach, once as a recursive function, and then again in an iterative fashion. 
+// Your functions should receive a callback and invoke that callback on each node as it is traversing in depth-first fashion. 
+// Your functions should also receive a tree node so that it can begin traversing.
+
+// For example, given a tree like the following
+
+//                   6
+//                 /   \
+//               10     18
+//              /         \
+//             9           89
+
+// and the following callback function
+
+// const cb = (x) => console.log(x);
+// your depthFirstForEach function should start at the root node and print out, in this order, 6, 10, 9, 18, 89.
+
+
 // Recursive
 function rdfs(node, cb) {
     cb(node.value);
