@@ -1,3 +1,10 @@
+# You're trying to make your fortune by trading Bitcoin. 
+# Suppose you want to automate this task. 
+# Write a function findMaxProfit that receives an array of today's Bitcoin prices. 
+# Your function should return the maximum profit you can make from a single buy and sell. 
+# You must buy first before selling; shorting is not allowed.
+
+
 def is_max_profit_negative(prices):
   for i in range(0, len(prices) - 1):
     if prices[i] < prices[i + 1]:
