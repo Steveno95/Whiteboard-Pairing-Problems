@@ -44,3 +44,19 @@ class ListNode:
     def __init__(self, value):
         self.value = value
         self.next = None
+
+
+a = ListNode("Australian Sheperd")
+b = ListNode("Beagle")
+c = ListNode("Cairne Terrier")
+d = ListNode("Dobermann")
+e = ListNode("English Mastiff")
+
+a.next = b
+b.next = c
+c.next = d
+d.next = e
+
+print(kthToLastNode(2, a))   # should print 'Dobermann'
+print(kthToLastNode(5, a))   # should print 'Australian Sheperd'
+print(kthToLastNode(3, c))   # should print 'Cairne Terrier'
