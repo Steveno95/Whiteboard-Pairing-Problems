@@ -28,4 +28,14 @@ def kthToLastNode(k, head):
     leftNode = head
     rightNode = head
 
+    for i in range(k - 1):
+        if not rightNode.next:
+            raise Exception(f"k is bigger than the length of the list: {k}")
+
+        rightNode = rightNode.next
     
+    while rightNode.next:
+        leftNode = leftNode.next
+        rightNode = rightNode.next
+
+    return leftNode.value
