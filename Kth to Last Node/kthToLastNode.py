@@ -19,3 +19,13 @@
 # d.next = e;
 
 # kthToLastNode(2, a);  // returns the node with value "Dobermann" (the 2nd to last node)
+
+
+def kthToLastNode(k, head):
+    if k < 1:
+        raise Exception(f"Impossible to find less than first node: {k}")
+
+    leftNode = head
+    rightNode = head
+
+    
