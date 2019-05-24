@@ -19,5 +19,5 @@ function lcs(arr) {
         }
     }
 
-    
+    return maxSum;
 }
