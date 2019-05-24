@@ -12,5 +12,12 @@ function lcs(arr) {
     for (let i = 0; i < arr.lenght; i++) {
         sum += arr[i];
         
+        if(maxSum < sum) {
+            maxSum = sum;
+        } else if (sum < 0) {
+            sum = 0;
+        }
     }
+
+    
 }
