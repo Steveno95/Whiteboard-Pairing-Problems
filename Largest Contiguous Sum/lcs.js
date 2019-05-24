@@ -4,3 +4,9 @@
 
 // const arr = [2, 3, -8, -1, 2, 4, -2, 3];
 // console.log(largestContiguousSum(arr)); // should print 7
+
+function lcs(arr) {
+    let maxSum = 0;
+    let sum = 0;
+    
+}
