@@ -21,3 +21,7 @@ function lcs(arr) {
 
     return maxSum;
 }
+
+console.log(lcs([5, -9, 6, -2, 3])); // should print 7
+console.log(lcs([1, 23, 90, 0, -9])); // should print 114
+console.log(lcs([2, 3, -8, -1, 2, 4, -2, 3])); // should print 7
