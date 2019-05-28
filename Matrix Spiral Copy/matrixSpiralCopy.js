@@ -31,6 +31,20 @@ function spiralCopy(inputMatrix) {
             result.push(inputMatrix[i][rightCol]);
         }
         rightCol--;
+
+        if (topRow <= bottomRow) {
+            for (let i = rightCol; i >= leftCol; i--) {
+                result.push(inputMatrix[bottomRow][i]);
+            }
+            bottomRow--;
+        }
+
+        if (leftCol <= rightCol) {
+            for (let i = bottomRow; i >= topRow; i --) {
+                result.push(inputMatrix[i][leftCol]);
+            }
+            leftCol++;
+        }
     }
 
     return result;
