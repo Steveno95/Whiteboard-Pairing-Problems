@@ -49,3 +49,9 @@ class Stack:
             return None
 
 
+class MaxStack:
+    def __init__(self):
+        self.stack = Stack()
+        self.maxValues = Stack()
+    
+    
