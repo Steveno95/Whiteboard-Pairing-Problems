@@ -11,3 +11,12 @@
 
 // output: [1, 2, 3, 4, 5, 10, 15, 20, 19, 18, 17, 16, 11, 6, 7, 8, 9, 14, 13, 12]
 
+function spiralCopy(inputMatrix) {
+    const numRows = inputMatrix.length;
+    const numColumns = inputMatrix[0].length;
+    let topRow = 0;
+    let bottomRow = numRows - 1;
+    let leftCol = 0;
+    let rightCol = numColumns - 1;
+    
+}
