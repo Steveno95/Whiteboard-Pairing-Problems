@@ -27,3 +27,25 @@
 
 # Use the given Stack class to implement a new MaxStack class that has all the same methods as the base Stack class, 
 # along with a getMax method that returns the max value of the MaxStack in O(1) time. getMax should not remove the item.
+
+
+class Stack:
+    def __init__(self):
+        self.itmes = []
+
+    def push(self, item):
+        self.itmes.append(itme)
+
+    def pop(self):
+        if len(self.itmes) > 0:
+            return self.itmes.pop()
+        else:
+            return None
+    
+    def peek(self):
+        if len(self.items) > 0:
+            return self.items[len(self.itmes) - 1]
+        else:
+            return None
+
+
