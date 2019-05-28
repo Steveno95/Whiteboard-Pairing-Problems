@@ -31,20 +31,20 @@
 
 class Stack:
     def __init__(self):
-        self.itmes = []
+        self.items = []
 
-    def push(self, item):
-        self.itmes.append(itme)
+    def push(self, items):
+        self.items.append(items)
 
     def pop(self):
-        if len(self.itmes) > 0:
-            return self.itmes.pop()
+        if len(self.items) > 0:
+            return self.items.pop()
         else:
             return None
     
     def peek(self):
         if len(self.items) > 0:
-            return self.items[len(self.itmes) - 1]
+            return self.items[len(self.items) - 1]
         else:
             return None
 
