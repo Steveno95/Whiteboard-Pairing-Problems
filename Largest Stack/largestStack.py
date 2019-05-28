@@ -54,4 +54,19 @@ class MaxStack:
         self.stack = Stack()
         self.maxValues = Stack()
     
+    def push(self, item):
+        self.stack.push(item)
+        peekValue = self.maxValues.peek()
+        if peekValue is None or item >= peekValue:
+            self.maxValues.push(item)
     
+    def pop(self):
+        item = self.stack.pop()
+        if item == self.maxValues.peek():
+            self.maxValues.pop()
+        
+        return item
+    
+    def max(self):
+        return self.maxValues.peek()
+
