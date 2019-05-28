@@ -70,3 +70,15 @@ class MaxStack:
     def max(self):
         return self.maxValues.peek()
 
+
+maxStack = MaxStack()
+print(maxStack.max())  # should print None
+
+maxStack.push(1)
+print(maxStack.max())  # should print 1
+
+maxStack.push(100)
+print(maxStack.max()) # should print 100
+
+maxStack.pop()
+print(maxStack.max()) # should print 1 
