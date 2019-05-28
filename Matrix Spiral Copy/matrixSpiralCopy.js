@@ -18,5 +18,20 @@ function spiralCopy(inputMatrix) {
     let bottomRow = numRows - 1;
     let leftCol = 0;
     let rightCol = numColumns - 1;
-    
+
+    const result = [];
+
+    while (topRow<= bottomRow && leftCol<= rightCol) {
+        for (let i = leftCol; i <= rightCol; i ++) {
+            result.push(inputMatrix[topRow][i]);
+        }
+        topRow++;
+
+        for (let i = topRow; i <= bottomRow; i++) {
+            result.push(inputMatrix[i][rightCol]);
+        }
+        rightCol--;
+    }
+
+    return result;
 }
