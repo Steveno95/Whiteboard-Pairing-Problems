@@ -22,4 +22,6 @@ def getIndicesOfItemWeights(arr, limit):
         if complement in o:
             return [i, o[complement]]
         else:
-            
+            o[weight] = i
+    
+    return []
