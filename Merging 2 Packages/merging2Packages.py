@@ -12,3 +12,8 @@
 #        limit = 21
 # output: [3, 1]   // since these are the indices of 
 #                  // weights 6 and 15 whose sum equals 21
+
+
+def getIndicesOfItemWeights(arr, limit):
+    o = {}
+    
