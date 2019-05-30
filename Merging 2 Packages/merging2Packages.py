@@ -18,6 +18,7 @@ def getIndicesOfItemWeights(arr, limit):
     o = {}
 
     for i in range(len(arr)):
+        weight = arr[i]
         complement = limit - weight
         if complement in o:
             return [i, o[complement]]
