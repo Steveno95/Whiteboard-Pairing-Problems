@@ -26,3 +26,8 @@ def getIndicesOfItemWeights(arr, limit):
             o[weight] = i
     
     return []
+
+print(getIndicesOfItemWeights([4, 6, 10, 15, 16], 21)) # should print [3, 1]
+print(getIndicesOfItemWeights([4, 4], 8))
+print(getIndicesOfItemWeights([12, 6, 7, 14, 19, 3, 0, 25, 40], 7))
+print(getIndicesOfItemWeights([9], 9))
