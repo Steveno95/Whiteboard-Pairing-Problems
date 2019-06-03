@@ -48,4 +48,8 @@ class Heap {
         helperFuntion2(0);
         return min;
     }
+
+    getMin() {
+        return this.storage[0];
+    }
 }
