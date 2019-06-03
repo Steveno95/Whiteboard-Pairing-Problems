@@ -45,7 +45,7 @@ class Heap {
 
         const min = this.storage[0];
         this.storage[0] = this.storage.pop();
-        helperFuntion2(0);
+        this.siftDown(0);
         return min;
     }
 
@@ -58,6 +58,25 @@ class Heap {
         if (this.storage[parentIndex] > this.storage[index]) {
             [this.storage[parentIndex], this.storage[index]] = [this.storage[index], this.storage[parentIndex]];
             this.bubbleUp(parentIndex);
+        }
+    }
+
+    siftDown(index) {
+        const leftChildIndex = index * 2 + 1;
+        const rightChildIndex = index * 2 + 2;
+        let minChildIndex;
+
+        if (this.storage[leftChildIndex] && this.storage[rightChildIndex]) {
+            minChildIndex = this.storage[leftChildIndex] < this.storage[rightChildIndex] ? leftChildIndex : rightChildIndex;
+        } else if (this.storage[leftChildIndex]) {
+            minChildIndex = leftChildIndex;
+        } else if (this.storage[rightChildIndex]) {
+            minChildIndex = rightChildIndex;
+        }
+
+        if (this.storage[index] > this.storage[minChildIndex]) {
+            [this.storage[minChildIndex], this.storage[index]] = [this.storage[index], this.storage[minChildIndex]];
+            this.siftDown(minChildIndex);
         }
     }
 }
