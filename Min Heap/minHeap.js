@@ -80,3 +80,21 @@ class Heap {
         }
     }
 }
+
+const heap = new Heap();
+console.log(heap.getMin());    // should print 'undefined'
+
+heap.insert(5);
+console.log(heap.getMin());   // should print 5
+
+heap.insert(100);
+console.log(heap.getMin());   // should print 5
+
+heap.insert(2);
+console.log(heap.getMin());   // should print 2
+
+console.log(heap.delete());   // should print 2
+console.log(heap.delete());   // should print 5
+console.log(heap.delete());   // should print 100
+
+console.log(heap.getMin());   // should print 'undefined'
