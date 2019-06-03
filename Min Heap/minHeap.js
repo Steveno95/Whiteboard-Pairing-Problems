@@ -34,6 +34,18 @@ class Heap {
 
     insert(value) {
         const index = this.storage.push(value) - 1;
-        helerFuntion(index);
+        helperFuntion(index);
+    }
+
+    delete() {
+        if (!this.storage.length) return;
+        if (this.storage.length === 1) {
+            return this.storage.pop();
+        }
+
+        const min = this.storage[0];
+        this.storage[0] = this.storage.pop();
+        helperFuntion2(0);
+        return min;
     }
 }
