@@ -27,3 +27,13 @@
 
 // console.log(heap.getMin());   // should print 'undefined'
 
+class Heap {
+    constructor() {
+        this.storage = [];
+    }
+
+    insert(value) {
+        const index = this.storage.push(value) - 1;
+        helerFuntion(index);
+    }
+}
