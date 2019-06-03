@@ -34,7 +34,7 @@ class Heap {
 
     insert(value) {
         const index = this.storage.push(value) - 1;
-        helperFuntion(index);
+        this.bubbleUp(index);
     }
 
     delete() {
@@ -51,5 +51,13 @@ class Heap {
 
     getMin() {
         return this.storage[0];
+    }
+
+    bubbleUp(index) {
+        const parentIndex = Math.floor((index - 1) / 2);
+        if (this.storage[parentIndex] > this.storage[index]) {
+            [this.storage[parentIndex], this.storage[index]] = [this.storage[index], this.storage[parentIndex]];
+            this.bubbleUp(parentIndex);
+        }
     }
 }
