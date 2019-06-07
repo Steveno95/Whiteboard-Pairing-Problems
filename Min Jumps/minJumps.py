@@ -6,7 +6,7 @@
 # Output: 3   // going from 1 -> 3 -> 8 -> 9
 
 def minJumps(arr, n = None):
-    if n = None:
+    if n is None:
         n = len(arr)
     
     jumps = [None] * n
@@ -19,7 +19,8 @@ def minJumps(arr, n = None):
         jumps[i] = float("inf")
         for j in range(0, n):
             if i <= j + arr[j] and jumps[j] != float("inf"):
-                if jumps[i] = min(jumps[i], int(jumps[j]) + 1)
-                break
+                if jumps[j] is not None:
+                    jumps[i] = min(jumps[i], int(jumps[j]) + 1)
+                    break
     
-    
+    return jumps[n - 1]
