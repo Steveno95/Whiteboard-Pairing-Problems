@@ -4,3 +4,11 @@
 
 # Input: [1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9]
 # Output: 3   // going from 1 -> 3 -> 8 -> 9
+
+def minJumps(arr, n = None):
+    if n = None:
+        n = len(arr)
+    
+    jumps = [None] * n
+    if n == 0 or arr[0] == 0:
+        
