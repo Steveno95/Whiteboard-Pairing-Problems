@@ -24,3 +24,10 @@ def minJumps(arr, n = None):
                     break
     
     return jumps[n - 1]
+
+
+
+print(minJumps([1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9]))  # should print 3
+print(minJumps([1, 3, 6, 1, 0, 9]))                 # should print 3
+print(minJumps([2, 0, 0, 5, 8, 1, 7, 4, 9, 12, 1])) # should print inf
+print(minJumps([1, 3, 6, 3, 2, 3, 6, 8, 9, 5]))     # should print 4
