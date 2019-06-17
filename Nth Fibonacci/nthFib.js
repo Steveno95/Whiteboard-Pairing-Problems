@@ -24,4 +24,8 @@ function nthFib(n) {
     if (n in cache) {
         return cache[n];
     }
+
+    nth = nthFib(n - 1) + nthFib(n - 2);
+    cache[n] = nth;
+    return nth;
 }
