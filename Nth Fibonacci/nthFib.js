@@ -18,7 +18,7 @@ function nthFib(n) {
     if (n === 0) {
         return 0;
     }
-    if (n === 0) {
+    if (n === 1) {
         return 1;
     }
     if (n in cache) {
@@ -29,3 +29,12 @@ function nthFib(n) {
     cache[n] = nth;
     return nth;
 }
+
+
+console.log(nthFib(50));
+// should print 12586269025
+// within a quick span of time (less than 1 second)
+
+console.log(nthFib(1000));
+// should print 4.346655768693743e+208
+// within a quick span of time (less than 1 second)
