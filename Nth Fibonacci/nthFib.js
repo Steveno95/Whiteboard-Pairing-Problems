@@ -12,7 +12,23 @@
 
 // console.log(betterNthFib(1000));  // should print 4.346655768693743e+208 in less than 1 second
 
-cache = {}
+// python version
+// cache = {}
+
+// def nthFib(n):
+//     if n == 0:
+//         return 0
+//     if n == 1:
+//         return 1
+//     if n in cache:
+//         return cache[n]
+
+//     nth = nthFib(n - 1) + nthFib(n - 2)
+//     cache[n] = nth
+//     return nth
+
+
+cache = []
 
 function nthFib(n) {
     if (n === 0) {
