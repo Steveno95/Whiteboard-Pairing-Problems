@@ -32,7 +32,29 @@ def reconstructTrip(tickets):
         hash[ticket[0]] = ticket[1]
 
     for i in range(1, len(tickets) - 1):
-        route[i] = hash[i - 1]
+        route[i] = hash[route[i - 1]]
 
     return route
 
+shorterSet = [
+  [None, 'PDX'],
+  ['PDX', 'DCA'],
+  ['DCA', None],
+]
+
+
+longerSet = [
+  ['PIT', 'ORD'],
+  ['XNA', 'CID'],
+  ['SFO', 'BHM'],
+  ['FLG', 'XNA'],
+  [None, 'LAX'], 
+  ['LAX', 'SFO'],
+  ['CID', 'SLC'],
+  ['ORD', None],
+  ['SLC', 'PIT'],
+  ['BHM', 'FLG'],
+]
+
+print(reconstructTrip(shorterSet)) # should print [ 'PDX', 'DCA' ]
+print(reconstructTrip(longerSet))  # should print [ 'LAX', 'SFO', 'BHM', 'FLG', 'XNA', 'CID', 'SLC', 'PIT', 'ORD' ]
