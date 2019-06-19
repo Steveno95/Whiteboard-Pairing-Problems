@@ -19,3 +19,12 @@
 # Your function should output an array with the route of your trip. For the above example, it should look like this:
 
 # ['LAX', 'SFO', 'BHM', 'FLG', 'XNA', 'CID', 'SLC', 'PIT', 'ORD']
+
+
+def reconstructTrip(tickets):
+    hash = {}
+    route = [None] * (len(tickets) - 1)
+
+    for ticket in tickets:
+        if ticket[0] == None:
+            
