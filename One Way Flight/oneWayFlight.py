@@ -27,4 +27,9 @@ def reconstructTrip(tickets):
 
     for ticket in tickets:
         if ticket[0] == None:
-            
+            route[0] = ticket[1]
+
+        hash[ticket[0]] = ticket[1]
+
+    for i in range(1, len(tickets) - 1):
+        
