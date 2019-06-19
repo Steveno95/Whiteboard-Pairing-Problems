@@ -33,3 +33,6 @@ def reconstructTrip(tickets):
 
     for i in range(1, len(tickets) - 1):
         route[i] = hash[i - 1]
+
+    return route
+
