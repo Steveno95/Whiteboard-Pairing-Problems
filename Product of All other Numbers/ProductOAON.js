@@ -11,3 +11,10 @@
 
 // [7*3*4, 1*3*4, 1*7*4, 1*7*3]
 // If you come up with a solution that utilizes division, that's fine. Once you get through that, challenge yourself to then come up with a solution that doesn't utilize division!
+
+function productsExceptAtIndex(intArray) {
+    if (intArray.length < 2) {
+        throw new Error('Getting the product of numbers at other indices requires at least 2 numbers');
+    }
+    
+}
