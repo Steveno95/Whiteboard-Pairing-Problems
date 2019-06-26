@@ -29,4 +29,6 @@ function productsExceptAtIndex(intArray) {
         productsOfAllExceptAtIndex[j] *= productSoFar;
         productSoFar = intArray[j];
     }
+
+    return productsOfAllExceptAtIndex;
 }
