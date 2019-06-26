@@ -16,5 +16,11 @@ function productsExceptAtIndex(intArray) {
     if (intArray.length < 2) {
         throw new Error('Getting the product of numbers at other indices requires at least 2 numbers');
     }
-    
+    const productsOfAllExceptAtIndex = [];
+
+    let productSoFar = 1;
+    for (let i = 0; i < intArray.length; i++) {
+        productsOfAllExceptAtIndex[i] = productSoFar;
+        productSoFar *= intArray[i];
+    }
 }
