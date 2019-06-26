@@ -23,4 +23,10 @@ function productsExceptAtIndex(intArray) {
         productsOfAllExceptAtIndex[i] = productSoFar;
         productSoFar *= intArray[i];
     }
+
+    productSoFar = 1;
+    for (let j = intArray.length - 1; j >= 0; j--) {
+        productsOfAllExceptAtIndex[j] *= productSoFar;
+        productSoFar = intArray[j];
+    }
 }
