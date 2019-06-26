@@ -27,8 +27,11 @@ function productsExceptAtIndex(intArray) {
     productSoFar = 1;
     for (let j = intArray.length - 1; j >= 0; j--) {
         productsOfAllExceptAtIndex[j] *= productSoFar;
-        productSoFar = intArray[j];
+        productSoFar *= intArray[j];
     }
 
     return productsOfAllExceptAtIndex;
 }
+
+console.log(productsExceptAtIndex([1, 2, 3, 4, 5]));   // should print [120, 60, 40, 30, 24]
+console.log(productsExceptAtIndex([9, 90]));   // sould print [90, 9]
