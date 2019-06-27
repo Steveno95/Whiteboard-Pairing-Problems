@@ -12,3 +12,12 @@ class Queue:
     
     def enqueue(self, item):
         self.inStack.append(item)
+
+    def dequeue(self):
+        if len(self.outStack) == 0:
+            while len(self.inStack) > 0:
+                self.outStack.append(self.inStack.pop())
+        
+        return self.outStack.pop()
+
+    
