@@ -20,4 +20,11 @@ class Queue:
         
         return self.outStack.pop()
 
-    
+    def peek(self):
+        if len(self.inStack) == 0:
+            return None
+        else:
+            while len(self.inStack) > 0:
+                self.outStack.append(self.inStack.pop())
+        
+        return self.outStack[0]
