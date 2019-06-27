@@ -5,3 +5,9 @@
 
 # Analyze the time and space complexity of your solution.
 
+class Queue:
+    def __init__(self):
+        self.inStack = []
+        self.outStack = []
+    
+    
