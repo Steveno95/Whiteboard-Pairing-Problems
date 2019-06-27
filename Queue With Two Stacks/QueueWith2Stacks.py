@@ -28,3 +28,15 @@ class Queue:
                 self.outStack.append(self.inStack.pop())
         
         return self.outStack[0]
+
+
+q = Queue()
+print(q.peek()) # should print None
+q.enqueue(10)
+print(q.peek()) # should print 10
+q.enqueue(9)
+q.enqueue(8)
+print('------------------------')
+print(q.dequeue()) # should print 10
+print(q.dequeue()) # should print 9
+print(q.dequeue()) # should print 8
