@@ -10,4 +10,5 @@ class Queue:
         self.inStack = []
         self.outStack = []
     
-    
+    def enqueue(self, item):
+        self.inStack.append(item)
