@@ -12,6 +12,12 @@
 //   }
 // }
 
+function reversedLinkedList(node) {
+    let current = node;
+    let nextNode = null;
+    let prevNode = null;
+}
+
 class ListNode {
   constructor(value) {
     this.value = value;
