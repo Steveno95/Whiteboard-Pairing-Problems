@@ -23,6 +23,8 @@ function reversedLinkedList(node) {
         prevNode = current;
         current = nextNode;
     }
+
+    return prevNode.value;
 }
 
 class ListNode {
