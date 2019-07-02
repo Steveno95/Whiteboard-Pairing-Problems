@@ -45,4 +45,13 @@ b.next = c;
 c.next = d;
 d.next = e;
 
+function print(node) {
+    let current = node;
+
+    while (current) {
+        console.log(current.value);
+        current = current.next;
+    }
+}
+
 
