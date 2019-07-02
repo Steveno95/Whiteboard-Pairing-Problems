@@ -16,6 +16,13 @@ function reversedLinkedList(node) {
     let current = node;
     let nextNode = null;
     let prevNode = null;
+
+    while (current) {
+        nextNode = current.next;
+        current.next = prevNode;
+        prevNode = current;
+        current = nextNode;
+    }
 }
 
 class ListNode {
