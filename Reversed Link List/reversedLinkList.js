@@ -54,4 +54,7 @@ function print(node) {
     }
 }
 
+console.log(reversedLinkedList(a)); // should print 'e'
+console.log('------');
+print(e); // should print 'e', 'd', 'c', 'b', 'a'
 
