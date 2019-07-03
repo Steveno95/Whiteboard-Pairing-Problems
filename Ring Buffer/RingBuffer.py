@@ -45,3 +45,21 @@ class RingBuffer:
     def allValues(self):
         return self.storage
 
+buffer = RingBuffer(5)
+
+buffer.append('a')
+buffer.append('b')
+buffer.append('c')
+buffer.append('d')
+print(buffer.allValues()) # should print ['a', 'b', 'c', 'd', 'None']
+
+buffer.append('e')
+print(buffer.allValues()) # should print ['a', 'b', 'c', 'd', 'e']
+
+buffer.append('f')
+print(buffer.allValues()) # should print ['f', 'b', 'c', 'd', 'e']
+
+buffer.append('g')
+buffer.append('h')
+buffer.append('i')
+print(buffer.allValues()) # should print ['f', 'g', 'h', 'i', 'e']
