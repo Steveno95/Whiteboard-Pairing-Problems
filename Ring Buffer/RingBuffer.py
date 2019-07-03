@@ -42,4 +42,6 @@ class RingBuffer:
         if self.current == self.capacity:
             self.current = 0
     
-    
+    def allValues(self):
+        return self.storage
+
