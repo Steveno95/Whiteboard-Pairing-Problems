@@ -24,3 +24,15 @@ def rps(n):
         result = []
     return prev_list
 
+if __name__ == "__main__":
+    rv1 = rps(2)
+    print(rv1)  # should print [['rock', 'rock'], ['rock', 'paper'], ['rock', 'scissors'], ['paper', 'rock'], ['paper', 'paper'], ['paper', 'scissors'], ['scissors', 'rock'], ['scissors', 'paper'], ['scissors', 'scissors']]
+
+    rv2 = rps(3)
+    print(len(rv2))  # should print 27
+
+    rv3 = rps(4)
+    print(len(rv3))  # should print 81
+
+    rv4 = rps(5)
+    print(len(rv4))  # should print 243
