@@ -22,4 +22,5 @@ def rps(n):
         count += 1
         prev_list = result.copy()
         result = []
-    
+    return prev_list
+
