@@ -32,3 +32,7 @@
 // ]
 
 
+function rotateImage(matrix) {
+    matrix.forEach(row => row.reverse());
+    
+}
