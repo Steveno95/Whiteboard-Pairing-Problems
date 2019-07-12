@@ -27,4 +27,6 @@ function searchSortedMatrix(matrix, target) {
             return [row, col];
         }
     }
+
+    return [-1, -1];
 }
