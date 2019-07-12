@@ -19,6 +19,12 @@ function searchSortedMatrix(matrix, target) {
     let col = matrix[0].length - 1;
 
     while (row < matrix.length && col >= 0) {
-        
+        if (matrix[col][row] > target) {
+            col --;
+        } else if (matrix[col][row] < target) {
+            row ++;
+        } else {
+            return [row, col];
+        }
     }
 }
