@@ -50,3 +50,18 @@ class SetOfStacks:
     def popAt(self, index):
         return self.stacks[index].pop()
 
+
+stacks = SetOfStacks(3)
+stacks.push(6)
+stacks.push(8)
+stacks.push(3)
+print(len(stacks))  # should print 1
+
+stacks.push(4)
+print(len(stacks)) # should print 2
+
+print(stacks.popAt(0)) # should print 3
+
+print(stacks.pop()) # should print 4
+print(stacks.pop()) # should print 8
+print(len(stacks)) # should print 1
