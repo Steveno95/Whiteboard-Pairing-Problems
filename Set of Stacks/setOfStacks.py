@@ -38,4 +38,8 @@ class SetOfStacks:
         if len(self.stacks[self.stackIndex]) < self.capacity:
             self.stacks[self.stackIndex].append(item)
         else:
-            
+            self.stacks.append([])
+            self.stackIndex += 1
+            self.stacks[self.stackIndex].append(item)
+
+    
