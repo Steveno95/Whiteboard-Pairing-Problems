@@ -42,4 +42,11 @@ class SetOfStacks:
             self.stackIndex += 1
             self.stacks[self.stackIndex].append(item)
 
-    
+    def pop(self):
+        if len(self.stacks[self.stackIndex]) == 0:
+            self.stackIndex -= 1
+        return self.stacks[self.stackIndex].pop()
+
+    def popAt(self, index):
+        return self.stacks[index].pop()
+
