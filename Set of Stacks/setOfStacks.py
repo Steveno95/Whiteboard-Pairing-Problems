@@ -24,3 +24,11 @@
 
 # console.log(stacks.length);   // should print 1
 
+
+class SetOfStacks:
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.stacks = [[]]
+        self.stackIndex = 0
+
+    
