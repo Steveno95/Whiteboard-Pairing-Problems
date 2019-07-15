@@ -31,4 +31,11 @@ class SetOfStacks:
         self.stacks = [[]]
         self.stackIndex = 0
 
-    
+    def __len__(self):
+        return self.stackIndex + 1
+
+    def push(self, item):
+        if len(self.stacks[self.stackIndex]) < self.capacity:
+            self.stacks[self.stackIndex].append(item)
+        else:
+            
