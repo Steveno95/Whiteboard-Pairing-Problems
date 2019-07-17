@@ -34,3 +34,36 @@ function parseNumber(string, index) {
     return [parseInt(numberValue, 10), numberLength];
 }
 
+function smallestString(str1, str2) {
+    let s1 = 0;
+    let s2 = 0;
+    const len1 = str1.length - 1;
+    const len2 = str2.length - 1;
+
+    while (s1 <= len1 && s2 <= len2) {
+        if (isAlpha(str1[s1]) && isAlpha(str2[s2])) {
+            if (str1[s1] === str2[s2]) {
+                s1++;
+                s2++;
+            } else {
+                return str1[s1] < str2[s2] ? str1 : str2;
+            }
+        } else {
+            if (isDigit(str1[s1]) && isDigit(str2[s2])) {
+                let [n1, l1] = parseNumber(str1, s1);
+                let [n2, l2] = parseNumber(str2, s2);
+
+                if (n1 !== n2) {
+                    return n1 < n2 ? str1 : str2;
+                } else {
+                    s1 += l1;
+                    s2 += l2;
+                }
+            } else {
+                return str1[s1] < str2[s2] ? str1 : str2;
+            }
+        }
+    }
+    return len1 < len2 ? str1 : str2;
+}
+
