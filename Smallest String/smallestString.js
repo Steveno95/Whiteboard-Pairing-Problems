@@ -14,3 +14,10 @@
 // expected output: "a2" since 2 comes before 10 
 
 
+function isDigit(str) {
+    return str.match(/[0-9]/i);
+}
+
+function isAlpha(str) {
+    return str.match(/[a-z]/i);
+}
