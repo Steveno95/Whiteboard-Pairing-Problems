@@ -67,3 +67,18 @@ function smallestString(str1, str2) {
     return len1 < len2 ? str1 : str2;
 }
 
+console.log(smallestString("a", "b"));              // should print "a"
+console.log('--------------');
+console.log(smallestString("a1", "a2"));            // should print "a1"
+console.log('--------------');
+console.log(smallestString("a10", "a2"));           // should print "a2"
+console.log('--------------');
+console.log(smallestString("abcd123", "abc123"));   // should print "abc123"
+console.log('--------------');
+console.log(smallestString("abc", "abcd"));         // should print "abc"
+console.log('--------------');
+console.log(smallestString("abc123a", "abc123b"));  // should print "abc123a"
+console.log('--------------');
+console.log(smallestString("9876", "987"));         // should print "987"
+console.log('--------------');
+console.log(smallestString("6a", "6b"));            // should print "6a"
