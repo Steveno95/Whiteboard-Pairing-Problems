@@ -21,3 +21,16 @@ function isDigit(str) {
 function isAlpha(str) {
     return str.match(/[a-z]/i);
 }
+
+function parseNumber(string, index) {
+    let numberLength = 0;
+    let numberValue = '';
+
+    while (index < string.length && isDigit(string[index])) {
+        numberLength++;
+        numberValue += string[index];
+        index++;
+    }
+    return [parseInt(numberValue, 10), numberLength];
+}
+
