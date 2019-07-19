@@ -44,3 +44,12 @@
 # sortedStack.printContents();  // should print 1, 4, 5, 6, 8, 10
 
 
+class Stack:
+    def __init__(self):
+        self.storage = []
+
+    def push(self, item):
+        self.storage.append(item)
+
+    
+
