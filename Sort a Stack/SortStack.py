@@ -74,3 +74,24 @@ def sortStack(s):
         output.push(temp)
     return output
 
+
+s = Stack()
+s.push(10)
+s.push(4)
+
+sorted_stack = sortStack(s)
+sorted_stack.print_stack()  # should print 4, 10
+
+# print a newline
+print()
+
+s.push(8)
+s.push(5)
+s.push(1)
+s.push(6)
+s.push(19)
+s.push(4)
+
+sorted_stack = sortStack(s)
+sorted_stack.print_stack()  # should print 1, 4, 5, 6, 8, 19
+
