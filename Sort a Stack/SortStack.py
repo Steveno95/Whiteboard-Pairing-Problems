@@ -64,5 +64,9 @@ class Stack:
         for x in self.storage:
             print(x)
 
-
+def sortStack(s):
+    output = Stack()
+    while not s.is_empty():
+        temp = s.pop()
+        
 
