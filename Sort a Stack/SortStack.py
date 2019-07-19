@@ -68,5 +68,9 @@ def sortStack(s):
     output = Stack()
     while not s.is_empty():
         temp = s.pop()
-        
+        while not output.is_empty() and output.peek() > temp:
+            s.push(output.pop())
+
+        output.push(temp)
+    return output
 
