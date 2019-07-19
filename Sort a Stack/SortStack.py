@@ -57,3 +57,12 @@ class Stack:
     def peek(self):
         return self.storage[len(self.storage) - 1]
 
+    def is_empty(self):
+        return len(self.storage) == 0
+
+    def print_stack(self):
+        for x in self.storage:
+            print(x)
+
+
+
