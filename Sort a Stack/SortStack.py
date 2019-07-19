@@ -51,5 +51,9 @@ class Stack:
     def push(self, item):
         self.storage.append(item)
 
-    
+    def pop(self):
+        return self.storage.pop()
+
+    def peek(self):
+        return self.storage[len(self.storage) - 1]
 
