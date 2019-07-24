@@ -27,3 +27,16 @@
 // print(trie.contains("ogo"))  # should print True
 
 
+class SuffixTrie {
+    constructor(string) {
+        this.root = {};
+        this.endSymbol = '*';
+        this.populateTrie(string);
+    }
+
+    populateTrie(string) {
+        for (let i = 0; i < string.length; i++) {
+            this.someMethod(i, string);
+        }
+    }
+}
