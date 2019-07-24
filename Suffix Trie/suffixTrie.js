@@ -36,7 +36,19 @@ class SuffixTrie {
 
     populateTrie(string) {
         for (let i = 0; i < string.length; i++) {
-            this.someMethod(i, string);
+            this.insertSubStringAt(i, string);
         }
+    }
+
+    insertSubStringAt(index, string) {
+        let node = this.root;
+        for (let i = index; i < string.length; i++) {
+            const letter = string[i];
+            if (!(letter in node)) {
+                node[letter] = {};
+            }
+            node = node[letter];
+        }
+        node[this.endSymbol] = true;
     }
 }
