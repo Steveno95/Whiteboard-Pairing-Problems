@@ -64,3 +64,26 @@ class SuffixTrie {
         return this.endSymbol in node;
     }
 }
+
+
+trie = new SuffixTrie("pogo");
+console.log(trie.root);  // should print the following
+// {
+//     "p": {
+//         "o": {
+//             "g": {
+//                 "o": {'*': True}
+//             }
+//         }
+//     }, 
+//     "o": {
+//         "g": {
+//             "o": {'*': True}
+//         }, 
+//         "*": True}, 
+//     "g": {
+//         "o": {'*': True}
+//     }
+// }
+
+console.log(trie.contains("ogo"));  // should print True
