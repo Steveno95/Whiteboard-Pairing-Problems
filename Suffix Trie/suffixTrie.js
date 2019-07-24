@@ -51,4 +51,16 @@ class SuffixTrie {
         }
         node[this.endSymbol] = true;
     }
+
+    contains(string) {
+        let node = this.root;
+        for (let i = 0; i < string.length; i++) {
+            const letter = string[i];
+            if (!(letter in node)) {
+                return false;
+            }
+            node = node[letter];
+        }
+        return this.endSymbol in node;
+    }
 }
