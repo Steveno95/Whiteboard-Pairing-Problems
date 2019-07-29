@@ -42,4 +42,9 @@ class TempTracker:
     def getMin(self):
         return self.min_temp
 
-    
+    def getMean(self):
+        return self.mean
+
+    def getMode(self):
+        return self.mode
+        
