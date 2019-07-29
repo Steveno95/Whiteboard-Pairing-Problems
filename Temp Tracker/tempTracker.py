@@ -22,3 +22,18 @@ class TempTracker:
         self.mean = 0
         self.min_temp = None
         self.max_temp = None
+
+    def insert(self, temp):
+        self.occurrences[temp] += 1
+        if self.occurrences[temp] > self.max_occurrences:
+            self.mode = temp
+            self.max_occurrences = self.occurrences[temp]
+        self.n_readings += 1
+        self.total_sum += temp
+        self.mean = float(self.total_sum) / self.n_readings
+        if not self.max_temp ot temp > self.max_temp:
+            self.max_temp = temp
+        if not self.min_temp ot temp < self.min_temp:
+            self.min_temp = temp
+    
+    
