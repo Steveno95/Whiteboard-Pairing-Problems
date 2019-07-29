@@ -47,4 +47,28 @@ class TempTracker:
 
     def getMode(self):
         return self.mode
-        
+
+if __name__ == '__main__':
+  tracker = TempTracker()
+  tracker.insert(32)
+
+  print(f"mean: {tracker.getMean()}")  # should print 32.0
+  print(f"min: {tracker.getMin()}")    # should print 32
+  print(f"max: {tracker.getMax()}")    # should print 32
+  print(f"mode: {tracker.getMode()}")  # should print 32
+
+  tracker.insert(135)
+
+  print(f"mean: {tracker.getMean()}")  # should print 83.5
+  print(f"min: {tracker.getMin()}")    # should print 32
+  print(f"max: {tracker.getMax()}")    # should print 135
+  print(f"mode: {tracker.getMode()}")  # can print either 32 or 135
+
+  tracker.insert(135)
+
+  print(f"mean: {tracker.getMean()}")  # should print 100.66666666666667
+  print(f"min: {tracker.getMin()}")    # should print 32
+  print(f"max: {tracker.getMax()}")    # should print 135
+  print(f"mode: {tracker.getMode()}")  # should print 135
+
+
