@@ -12,3 +12,13 @@
 # If there is more than one mode, return any of the modes.
 
 
+class TempTracker:
+    def __init__(self):
+        self.occurrences = [0] * 140
+        self.max_occurrences = 0
+        self.mode = None
+        self.n_readings = 0
+        self.total_sum = 0
+        self.mean = 0
+        self.min_temp = None
+        self.max_temp = None
