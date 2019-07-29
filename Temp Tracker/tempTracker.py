@@ -31,9 +31,15 @@ class TempTracker:
         self.n_readings += 1
         self.total_sum += temp
         self.mean = float(self.total_sum) / self.n_readings
-        if not self.max_temp ot temp > self.max_temp:
+        if not self.max_temp or temp > self.max_temp:
             self.max_temp = temp
-        if not self.min_temp ot temp < self.min_temp:
+        if not self.min_temp or temp < self.min_temp:
             self.min_temp = temp
     
+    def getMax(self):
+        return self.max_temp
+
+    def getMin(self):
+        return self.min_temp
+
     
