@@ -24,3 +24,9 @@
 //        duration = 12 
 // output: [] // since there is no common slot
 
+function timePlanner(a, b, duration) {
+    let aCount = 0;
+    let bCount = 0;
+
+    
+}
