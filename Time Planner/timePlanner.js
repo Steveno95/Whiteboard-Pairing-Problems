@@ -32,6 +32,8 @@ function timePlanner(a, b, duration) {
         const start = Math.max(a[aCount][0], b[bCount][0]);
         const end = Math.min(a[aCount][1], b[bCount][1]);
 
-        
+        if (start + duration <= end) {
+            return [start, start + duration];
+        }
     }    
 }
