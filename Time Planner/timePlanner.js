@@ -41,5 +41,6 @@ function timePlanner(a, b, duration) {
         } else {
             bCount++;
         }
-    }    
+    }   
+    return []; 
 }
