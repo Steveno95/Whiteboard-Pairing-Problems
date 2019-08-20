@@ -36,7 +36,7 @@ function timePlanner(a, b, duration) {
             return [start, start + duration];
         }
 
-        if (a[aCount][1 < b[bCount][1]]) {
+        if (a[aCount][1] < b[bCount][1]) {
             aCount++;
         } else {
             bCount++;
