@@ -44,4 +44,7 @@ class BinaryTreeNode:
         self.right = BinaryTreeNode(value)
         return self.right
 
+def isBinarySearchTree(root):
+    nodeBoundsStack = []
+    nodeBoundsStack.append({'node': root, 'lower': float('-inf'), 'upper': float('inf')})
     
