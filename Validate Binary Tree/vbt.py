@@ -64,3 +64,17 @@ def isBinarySearchTree(root):
             nodeBoundsStack.append({'node': node.right, 'lower': node.value, 'upper': upper})
 
     return True
+
+
+# Tests
+root = BinaryTreeNode(50)
+root.insertLeft(30)
+root.left.insertLeft(20)
+root.left.insertRight(60)
+root.insertRight(80)
+root.right.insertLeft(70)
+root.right.insertRight(90)
+
+print(isBinarySearchTree(root.left))  # should print True
+print(isBinarySearchTree(root.right)) # should print True
+print(isBinarySearchTree(root))       # should print False
