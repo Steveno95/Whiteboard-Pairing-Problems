@@ -28,3 +28,20 @@
 # isBinarySearchTree(root);   // should return true
 # Keep in mind that it isn't enough to check that nodes in the left subtree are always descending as we traverse down. 
 # Conversely, it isn't enough to simply check that all the nodes in the right subtee are ascending.
+
+
+class BinaryTreeNode:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+    def insertLeft(self, value):
+        self.left = BinaryTreeNode(value)
+        return self.left
+
+    def insertRight(self, value):
+        self.right = BinaryTreeNode(value)
+        return self.right
+
+    
