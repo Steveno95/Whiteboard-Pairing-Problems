@@ -54,4 +54,13 @@ def isBinarySearchTree(root):
         lower = nodeBounds['lower']
         upper = nodeBounds['upper']
 
-    
+        if node.value <= lower or node.value >= upper:
+            return False
+
+        if node.left:
+            nodeBoundsStack.append({'node': node.left, 'lower': lower, 'upper': node.value})
+
+        if node.right:
+            nodeBoundsStack.append({'node': node.right, 'lower': node.value, 'upper': upper})
+
+    return True
