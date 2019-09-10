@@ -48,3 +48,10 @@ def isBinarySearchTree(root):
     nodeBoundsStack = []
     nodeBoundsStack.append({'node': root, 'lower': float('-inf'), 'upper': float('inf')})
     
+    while len(nodeBoundsStack):
+        nodeBounds = nodeBoundsStack.pop()
+        node = nodeBounds['node']
+        lower = nodeBounds['lower']
+        upper = nodeBounds['upper']
+
+    
