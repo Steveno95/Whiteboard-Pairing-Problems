@@ -31,4 +31,7 @@ function zerosToTheRight(arr) {
             }
         }
     }
+
+    console.log(arr);
+    return arr.length - nonZeros;
 }
