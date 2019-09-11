@@ -17,7 +17,18 @@ function zerosToTheRight(arr) {
 
     while (left <= right) {
         if (arr[left] === 0 && arr[right] !== 0) {
-            
+            [arr[left], arr[right]] = [arr[right], arr[left]];
+            left++;
+            right--;
+            nonZeros++;
+        } else {
+            if (arr[left] !== 0) {
+                left++;
+            }
+            if (arr[right] === 0) {
+                right--;
+                nonZeros++;
+            }
         }
     }
 }
