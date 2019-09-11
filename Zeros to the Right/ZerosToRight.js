@@ -9,3 +9,15 @@
 // Sample input: [4, 2, 1, 5]
 // Expected output: 4
 // Expected output array state: [4, 2, 1, 5]
+
+function zerosToTheRight(arr) {
+    let left = 0;
+    let right = arr.length - 1;
+    let nonZeros = 0;
+
+    while (left <= right) {
+        if (arr[left] === 0 && arr[right] !== 0) {
+            
+        }
+    }
+}
