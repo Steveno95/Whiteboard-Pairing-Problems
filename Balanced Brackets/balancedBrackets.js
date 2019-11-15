@@ -5,8 +5,10 @@
 function balancedBrackets(str) {
     let line = str.split('');
 
+    // use a stack to keep track of the opening brackets
     const stack = [];
 
+    // use an object to store the possible openers with their corresponding closers
     const openers = {
         '(': ')',
         '{': '}',
@@ -20,9 +22,11 @@ function balancedBrackets(str) {
     }
 
     for (let i = 0; i < line.length; i ++) {
+        // if there is an opener push it to the stack
         if (openers[line[i]]) {
             stack.push(line[i]);
         } else if (closers[line[i]]) {
+            // if the closer doesn't correspond to the most recent opener return false
             if (openers[stack.pop()] !== line[i]) return false;
         }
     }
