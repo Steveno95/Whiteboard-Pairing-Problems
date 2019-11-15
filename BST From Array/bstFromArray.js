@@ -33,6 +33,7 @@ class BinaryTreeNode {
     }
 }
 
+// helper function is to validate that the created tree is a valid bst
 function bst(root) {
     const stack = [];
     stack.push({node: root, lowerBound: -Infinity, upperBound: Infinity});
@@ -54,6 +55,7 @@ function bst(root) {
     return true;
 }
 
+// this helper function is to check the max depth of the bst
 function maxDepth(node) {
     if (!node) return 0;
     return 1 + Math.max(maxDepth(node.left), maxDepth(node.right));
