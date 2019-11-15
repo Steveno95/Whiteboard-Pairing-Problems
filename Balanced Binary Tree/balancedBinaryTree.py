@@ -2,14 +2,17 @@
 # Your function should return true if the tree is perfectly balanced and false otherwise.
 
 def checkBalance(root):
+    # An empty tree is balanced by default
     if root == None:
         return True
 
+    # recursive helper function to help check the min depth of the tree
     def minDepth(node):
         if node == None:
             return 0
         return 1 + min(minDepth(node.left), minDepth(node.right))
 
+    # recursive helper function to help check the max depth of the three
     def maxDepth(node):
         if node == None:
             return 0
