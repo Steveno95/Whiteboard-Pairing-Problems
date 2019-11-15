@@ -9,18 +9,26 @@ def count_votes(arr):
     max_votes = 0
     winner = ''
 
+    # iterate of the whole array
     for vote in arr:
+        # if name doesn't exist in counts add it with a value of 0
         if vote not in counts:
             counts[vote] = 0
 
+        # increment count by 1
         counts[vote] += 1
 
+        # check to see if the current name has more votes then the current max
         if counts[vote] > max_votes:
+            # set the max votes to the current name votes if larger
             max_votes = counts[vote]
 
+            # since this name has more votes it is currently the winner
             winner = vote
 
+        # checks to see if the current name is tied to the winner
         elif counts[vote] == max_votes:
+            # if tied this sets the winner to the name that is greater (which is last alphabetically)
             if vote > winner:
                 winner = vote
     
